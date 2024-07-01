@@ -22,11 +22,11 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-ligth">
 
       <div class="collapse navbar-collapse" id="navbar">
         <a href="/" class="navbar-brand">
-          <img src="/img/logo.svg" alt= "EliteEvents">
+          <img src="/img/logo.svg" alt= "Elite Events">
         </a>
         <ul class="navbar-nav">
         <li class="nav-item">

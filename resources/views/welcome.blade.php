@@ -1,26 +1,35 @@
 @extends('layouts.main')
 
-@section('title', 'Corigão Eventos')
+@section('title', 'ELITE EVENTS')
 
 @section ('content')
 
-<h1>HELOO</h1>
+<div id="search-container" class="col-md-12">
+    <h1>Buscar eventos</h1>
+    <form action="">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Procurar..."></span>
 
-<img src="/img/banner.jpeg" alt="banner">
-@if (10 > 5)
-<p>A condição é true</p>
-@endif
-<p> {{$nome}}</p>
+    </form>
+</div>
 
-@if($nome == "Palmeiras")
-<p> O nome é Corithians</p>
-elseif ($nome == "Corinthians")
-<p> o nome é {{ $nome }} e ele tem idade {{ $idade }} anos </p>
-@else
-<p>O nome não é Corinthians</p>
-@endif
+<div id="events-container" class="col-md-12">
+    <h2>Próximos Eventos</h2>
+    <p class= "subtitle">Veja os Eventos dos próximos dias</p>
+    <div id="cards-container" class="row">
+        @foreach($events as $event)
+        <div class="card col-md-3">
+            <img src="/img/sp.jpg" alt="{{ $event->title }}">
+            <div class="card-body">
+                <p div class="card-date">30/06/2024</p>
+                <h5 class="card-title">{{$event->title}}</h5>
+                <p class="card-participants">X Participantes</p>
+                <a href="a" class="btn btn-primary">Saber mais</a>
 
-@for ($i= 0; $i < count ($arr); $i++) <p> {{$arr[$i] }} - {{$i}} </p>
-    @endfor
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+</div>
 
-    @endsection
+@endsection
